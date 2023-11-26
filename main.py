@@ -22,7 +22,8 @@ class MainWindow(QMainWindow):
     def draw_circles(self, qp):
         for i in range(randint(1, 5)):
             r = randint(1, 450)
-            qp.setBrush(QColor(255, 255, 153))
+            color = QColor(randint(0, 255), randint(0, 255), randint(0, 255))
+            qp.setBrush(color)
             qp.drawEllipse(randint(1, 250), randint(1, 250), r, r)
 
     def paint(self):
